@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jw2</title>
-  </head>
-  <body>
-    <p>jw2</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Jumpers - Monkey Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-layer">
+            <div id="menu" class="overlay">
+                <h1>Jungle Jumpers</h1>
+                <p>Jump as high as you can!</p>
+                <button id="start-btn">Start Game</button>
+                <div class="controls-hint">
+                    Use <b>A / D</b> or <b>Arrow Keys</b> to move
+                </div>
+            </div>
+            <div id="hud" class="hidden">
+                <div class="score-box">Height: <span id="height-val">0</span>m</div>
+                <div class="score-box">Bananas: <span id="banana-val">0</span></div>
+            </div>
+            <div id="game-over" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p>Final Height: <span id="final-height">0</span>m</p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+            <div id="multiplayer-status">
+                <span id="status-dot"></span>
+                <span id="status-text">Connecting...</span>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="multiplayer.js"></script>
+</body>
 </html>
